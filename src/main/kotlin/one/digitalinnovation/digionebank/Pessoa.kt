@@ -1,6 +1,6 @@
 package one.digitalinnovation.digionebank
 
 abstract class Pessoa (
-    val name: String = "Luiz",
-    val cpf:String = "123.123.123-12"
+    val name: String,
+    val cpf:String
 )
