@@ -5,8 +5,17 @@ import java.math.BigDecimal
 abstract class Funcionario(
     name:String,
     cpf:String,
-    var salario: BigDecimal
+    var salario: Double
     ) : Pessoa(name, cpf) {
 
-        abstract fun calculoAuxilio()
+        protected abstract fun calculoAuxilio():Double
+
+    override fun toString(): String {
+        return """
+            Nome: $name
+            CPF: $cpf
+            Salario: $salario
+            Auxilio: ${calculoAuxilio()}
+        """.trimIndent()
+    }
 }
